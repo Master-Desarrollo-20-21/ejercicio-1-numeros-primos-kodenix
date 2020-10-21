@@ -33,15 +33,13 @@ public class Calculator {
 		Number countedNumbers = new Number(1);
 		Number totalAmount = new Number();
 		Number currentNumber = new Number();
-		
+				
+		if (!currentNumber.isPrime()) currentNumber = currentNumber.nextPrimeNumber();
 		
 		while (countedNumbers.isLessThanOrEqualTo(lastNumber)) {
-			
-			if (currentNumber.isPrime()) {
-				totalAmount.increment(currentNumber);
-				currentNumber.print();
-				countedNumbers.incrementOne();
-			}
+			currentNumber.print();
+			totalAmount.increment(currentNumber);
+			countedNumbers.incrementOne();
 			currentNumber = currentNumber.nextPrimeNumber();
 		}
 		

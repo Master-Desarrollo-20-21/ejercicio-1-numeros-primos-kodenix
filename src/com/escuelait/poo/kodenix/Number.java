@@ -88,7 +88,6 @@ public class Number {
 	}
 	
 	public void print() {
-		System.out.print(this.value);
-		System.out.print(",");
+		System.out.print(this.value + ",");
 	}
 }
