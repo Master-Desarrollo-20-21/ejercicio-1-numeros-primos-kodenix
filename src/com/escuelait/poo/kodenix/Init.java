@@ -1,27 +1,27 @@
 package com.escuelait.poo.kodenix;
 
 public class Init {
+	
+	final static Number END_VALUE = new Number(50);
 
 	public static void main(String[] args) {
 		
-		final Number endValue = new Number(50);
-		Calculator calculator = new Calculator(endValue);
+		Calculator calculator = new Calculator(END_VALUE);
+		printHeader();
+		calculator.printExercise1();
+		printSeparator();
+		calculator.printExercise2();
 		
+	}
+	
+	public static void printHeader() {
 		System.out.println("=================================================");
 		System.out.println("                ESCUELA IT                       ");
 		System.out.println("=================================================");
-		
-		System.out.println("(Task1) - La suma de los números primos que hay entre los "+endValue.getValue()+" primeros números");
-		Number total1 = calculator.getIncrementedPrimeNumbersOnRange();
-		System.out.println();
-		System.out.println("Total: "+ total1.getValue());
+	}
+	
+	public static void printSeparator() {
 		System.out.println("--------------------------------------------------");
-		
-		
-		System.out.println("(Task2) - La suma de los "+endValue.getValue()+" primeros números primos");
-		Number total2 = calculator.getIncrementedLimitsPrimeNumbers();
-		System.out.println();
-		System.out.println("Total: " + total2.getValue());
 	}
 
 }
